@@ -4,7 +4,7 @@ import numpy as np
 from PIL import Image
 
 # Load model
-model = tf.keras.models.load_model("dog_breed_model.h5")
+model = tf.keras.models.load_model("on-fulldata-set.h5")
 
 # Load labels
 with open("labels.txt", "r") as f:
@@ -31,3 +31,4 @@ if uploaded_file is not None:
 
     st.subheader(f"Prediction: {class_names[predicted_index]}")
     st.write(f"Confidence: {confidence:.2f}%")
+
